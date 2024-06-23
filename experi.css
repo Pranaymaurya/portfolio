@@ -1,0 +1,136 @@
+/* Add this to your custom CSS file (e.g., styles.css) */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  position: relative;
+  cursor: pointer;
+  height: 100px;
+  border-radius: 100px;
+  border: none;
+  background: #333;
+  color: #e5e5e5;
+  font-weight: 600;
+  box-shadow: inset 20px 20px 39px #080a10,
+  inset -20px -20px 39px #1b263e;
+  font-size: 13px;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -10px;
+  top: -10px;
+  border-radius: 50%;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background: linear-gradient(35deg, rgb(47, 190, 238), rgb(218, 57, 143), rgb(139, 255, 23));
+  filter: blur(10px);
+}
+
+button:hover::after {
+  animation: rotcirclegr 1s linear infinite;
+}
+
+@keyframes rotcirclegr {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* .card {
+  width: 1500px;
+  height: 300px;
+  position: relative;
+  border-radius: 40px;
+  transition: all 0.8s;
+  perspective: 700px;
+  perspective-origin: center bottom;
+}
+
+.upper-part {
+  width: 100%;
+  height: 65%;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.9s;
+}
+
+.upper-part-face,
+.upper-part-back {
+  text-align: center;
+  background-color: rgb(96 165 250);
+  color: black;
+  border: 3px solid rgb(29 78 216);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  border-radius: 40px 40px 0 0;
+  font-weight: bold;
+  z-index: 2;
+  backface-visibility: hidden;
+  transition: all 0.6s;
+}
+
+.upper-part-back {
+  background-color: rgb(59 130 246);
+  color: lightgray;
+  transform: rotatex(180deg);
+}
+
+.lower-part {
+  width: 100%;
+  height: 35%;
+  border-radius: 0 0 40px 40px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center top;
+  transition: all 0.9s;
+}
+
+.lower-part-face,
+.lower-part-back {
+  background-color: rgb(59 130 246);
+  width: 100%;
+  height: 100%;
+  color: lightgray;
+  font-weight: bold;
+  position: absolute;
+  border-radius: 0 0 40px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0, -0.8px);
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.lower-part-back {
+  backface-visibility: visible;
+  border-radius: 40px;
+  color: black;
+  background-color: rgb(96 165 250);
+  transform: rotateX(180deg);
+  z-index: 1;
+  transition: border-radius 0.6s;
+}
+
+.card:hover > .upper-part {
+  transform: rotatex(-0.5turn);
+}
+
+.card:hover > .lower-part {
+  transform: translateY(88.3px) rotateX(0.5turn);
+}
+
+.card:hover > .lower-part > .lower-part-back {
+  border: 3px solid rgb(29 78 216);
+  border-radius: 0 0 40px 40px;
+} */
